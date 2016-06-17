@@ -6,18 +6,16 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter text:");
-		String exmpl = input.nextLine();
+		String text = input.nextLine();
 		
-		String[] parts = exmpl.split("\\s+");
+		String[] parts = text.split("\\s+");
 		Arrays.sort(parts);
 		StringBuilder sb = new StringBuilder();
 		for (String s : parts) {
 			sb.append(s);
 			sb.append(" ");
+			System.out.print(s + " ");
 		}
-
-		String sorted = sb.toString().trim();
-		System.out.println(sorted);
 		input.close();
 	}
 }
